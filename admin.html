@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - จัดการสินค้า</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>จัดการสินค้า</h1>
+    </header>
+
+    <main id="main-content">
+        <!-- ฟอร์มเข้าสู่ระบบ -->
+        <div id="login-form">
+            <h2>เข้าสู่ระบบ</h2>
+            <form id="admin-login">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">เข้าสู่ระบบ</button>
+            </form>
+            <p id="login-error" class="error-message" style="display: none;">ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</p>
+        </div>
+
+        <!-- ตารางข้อมูลสินค้า -->
+        <div id="admin-container" style="display: none;">
+            <section>
+                <h2>รายการสินค้า</h2>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th>ชื่อสินค้า</th>
+                            <th>สถานะ</th>
+                            <th>การจัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- สินค้าจะถูกแสดงที่นี่ -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ร้านขายหนังสือการ์ตูน</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
